@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.shizu.foody.MainActivity">
+
+       <de.hdodenhof.circleimageview.CircleImageView
+           android:id="@+id/imgAvatar"
+           android:src="@drawable/flower"
+           android:layout_centerHorizontal="true"
+           android:layout_width="120dp"
+           android:layout_height="120dp"
+           app:civ_border_width="5dp"
+           app:civ_border_color="#e90e0e0e"
+           />
+
+       <LinearLayout
+           android:id="@+id/text"
+           android:layout_below="@+id/imgAvatar"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           tools:ignore="InvalidId">
+
+           <TextView
+               android:textAlignment="center"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Hello Foody"
+               android:textColor="@android:color/black" />
+           <TextView
+           android:textAlignment="center"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="What can serve you today?"
+           android:textColor="@android:color/darker_gray" />
+       </LinearLayout>
+    <LinearLayout
+        android:id="@+id/liearSearch"
+        android:layout_below="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:background="@drawable/ic_search_black_24dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:layout_width="253dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Search for cuisine, name, add,.. " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Hue city"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="41dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_location_searching_black_24dp" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/row1"
+        android:layout_below="@+id/liearSearch"
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgCake2"
+            android:background="@drawable/candy"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:layout_width="100dp"
+            android:layout_height="80dp" />
+            <TextView
+                android:id="@+id/tvDis2"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/imgCake2"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:text="Discovery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvDis2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/ic_location_on_black_24dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imgCake"
+                android:background="@drawable/cake"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                android:layout_width="100dp"
+                android:layout_height="80dp" />
+            <TextView
+                android:id="@+id/tvDis"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/imgCake"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:text="Delivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvDis"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/ic_location_on_black_24dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imgCake1"
+                android:background="@drawable/place"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                android:layout_width="100dp"
+                android:layout_height="80dp" />
+            <TextView
+                android:id="@+id/tvDis1"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/imgCake1"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:text="Reservation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvDis1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/ic_location_on_black_24dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/row2"
+        android:layout_below="@+id/row1"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imgCakeRow0"
+                android:background="@drawable/teamilk"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                android:layout_width="100dp"
+                android:layout_height="80dp" />
+            <TextView
+                android:id="@+id/tvDisRow0"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/imgCakeRow0"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:text="Coupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvDisRow0"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/ic_location_on_black_24dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgCakeRow1"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/cake"
+                android:scaleType="centerCrop" />
+            <TextView
+                android:id="@+id/tvDisRow1"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/imgCakeRow1"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:text="Self-Order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvDisRow1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/ic_location_on_black_24dp" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:weightSum="5"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_weight="1"
+            android:src="@drawable/ic_home_black_24dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_weight="1"
+            android:src="@drawable/ic_local_offer_black_24dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_weight="1"
+            android:src="@drawable/ic_assignment_black_24dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_weight="1"
+            android:src="@drawable/ic_notifications_black_24dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_weight="1"
+            android:src="@drawable/ic_person_black_24dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</RelativeLayout>
